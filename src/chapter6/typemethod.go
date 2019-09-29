@@ -18,6 +18,5 @@ func main() {
 	fmt.Println(b.IsZero())
 
 	b = 1
-
 	fmt.Println(b.add(2))
 }
