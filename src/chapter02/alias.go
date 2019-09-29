@@ -12,8 +12,8 @@ type IntAlias = int
 // 别名
 type MyDuration time.Duration
 
-func (m MyDuration) EasySet(a string)  {
-	
+func (m MyDuration) EasySet(a string) {
+
 }
 
 func main() {

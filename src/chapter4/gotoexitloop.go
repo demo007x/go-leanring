@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	for x := 0; x < 10 ;x++  {
-		for y := 0; y < 10 ; y++ {
+	for x := 0; x < 10; x++ {
+		for y := 0; y < 10; y++ {
 			if y == 2 {
 				fmt.Println(y)
 				goto breakHere
@@ -13,6 +13,6 @@ func main() {
 	}
 	return
 
-	breakHere:
-		fmt.Println("done")
+breakHere:
+	fmt.Println("done")
 }

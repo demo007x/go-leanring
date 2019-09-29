@@ -34,7 +34,7 @@ func main() {
 	//fmt.Println(stringBuilder.String())
 
 	// 字符串格式化
-	var progress  = 2
+	var progress = 2
 	var target = 8
 
 	title := fmt.Sprintf("已采集%d个草药， 还需要%d个任务", progress, target)
@@ -48,13 +48,12 @@ func main() {
 
 	prifile := &struct {
 		Name string
-		HP int
+		HP   int
 	}{
 		Name: "rat",
-		HP: 150,
+		HP:   150,
 	}
 	fmt.Printf("使用'%%+v' %+v\n", prifile)
 	fmt.Printf("使用'%%#v' %#v\n", prifile)
 	fmt.Printf("使用'%%T' %T\n", prifile)
 }
-

@@ -24,6 +24,3 @@ func main() {
 	b = append(b, "8")
 	fmt.Println(len(b), b[0], b[1], b[2])
 }
-
-
-

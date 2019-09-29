@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 type Data struct {
-	complax []int // 测试切片在参数传递中的效果
-	instance InnerData // 实例分配的  InnerData
-	ptr *InnerData     // 将ptr声明为 InnerData
+	complax  []int      // 测试切片在参数传递中的效果
+	instance InnerData  // 实例分配的  InnerData
+	ptr      *InnerData // 将ptr声明为 InnerData
 }
 
 type InnerData struct {
@@ -22,11 +22,11 @@ func passByValue(inFunc Data) Data {
 
 func main() {
 	in := Data{
-		complax:  []int{1,2,3},
+		complax: []int{1, 2, 3},
 		instance: InnerData{
 			5,
 		},
-		ptr:      &InnerData{1},
+		ptr: &InnerData{1},
 	}
 
 	// 输入结构体成员的情况
@@ -40,4 +40,3 @@ func main() {
 	// 输出结构体指针地址
 	fmt.Printf("out ptr: %p\n", &out)
 }
-

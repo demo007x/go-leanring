@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 const size = 300
+
 func main() {
 	a := make([]int, 3)
 	a[0] = 0

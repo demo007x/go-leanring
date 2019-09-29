@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	)
+)
 
 func main() {
 	p := newPlayer(0.5)
@@ -14,4 +14,3 @@ func main() {
 		fmt.Println(p.Pos())
 	}
 }
-

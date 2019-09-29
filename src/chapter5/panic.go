@@ -9,7 +9,7 @@ import (
 func mustCompile(str string) *regexp.Regexp {
 	regexp, err := regexp.Compile(str)
 	if err != nil {
-		panic(`regexp: Compile(`+strconv.Quote(str)+`):`+err.Error())
+		panic(`regexp: Compile(` + strconv.Quote(str) + `):` + err.Error())
 	}
 
 	return regexp

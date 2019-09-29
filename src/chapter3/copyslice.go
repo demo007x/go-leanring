@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	const elementCount  = 1000
+	const elementCount = 1000
 
 	srcData := make([]int, elementCount)
 	for i := 0; i < elementCount; i++ {
@@ -15,7 +15,7 @@ func main() {
 	copy(refData, srcData)
 	srcData[0] = 999
 	fmt.Println(refData[0])
-	fmt.Println(copyData[0], copyData[elementCount - 1])
+	fmt.Println(copyData[0], copyData[elementCount-1])
 
 	copy(copyData, srcData[4:6])
 

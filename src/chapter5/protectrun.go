@@ -9,7 +9,7 @@ type panicContext struct {
 	function string //所在函数
 }
 
-func ProtectRun(entry func())  {
+func ProtectRun(entry func()) {
 	defer func() {
 		err := recover()
 		switch err.(type) {
@@ -27,7 +27,7 @@ func main() {
 	fmt.Println("运行前")
 	ProtectRun(func() {
 		fmt.Println("手动宕机前")
-		panic(&panicContext{function:"手动触发panic"})
+		panic(&panicContext{function: "手动触发panic"})
 		fmt.Println("手动宕机后")
 	})
 

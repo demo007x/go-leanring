@@ -15,11 +15,10 @@ func (p Point) Add(other Point) Point {
 }
 
 func main() {
-	p1 := Point{1,1}
-	p2 := Point{2,2}
+	p1 := Point{1, 1}
+	p2 := Point{2, 2}
 
 	result := p1.Add(p2)
 
 	fmt.Println(result)
 }
-

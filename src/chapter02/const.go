@@ -42,7 +42,7 @@ func (c ChipType) String() string {
 
 func main() {
 	fmt.Println(Arrow, Shuriken, SniperRifle, Rifle, Blower)
-	fmt.Printf("%d %d %d %d \n",FlagNone, FlagRed, FlagGreen, FlagBlue)
-	fmt.Printf("%b %b %b %b \n",FlagNone, FlagRed, FlagGreen, FlagBlue)
+	fmt.Printf("%d %d %d %d \n", FlagNone, FlagRed, FlagGreen, FlagBlue)
+	fmt.Printf("%b %b %b %b \n", FlagNone, FlagRed, FlagGreen, FlagBlue)
 	fmt.Printf("%s %d", CPU, GPU)
 }

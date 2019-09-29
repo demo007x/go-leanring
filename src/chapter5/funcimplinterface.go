@@ -13,7 +13,9 @@ type FuncCaller func(interface{})
 func (f FuncCaller) Call(p interface{}) {
 	f(p)
 }
+
 var invoker Invoker
+
 func main() {
 	invoker = FuncCaller(func(v interface{}) {
 		fmt.Println("from function", v)

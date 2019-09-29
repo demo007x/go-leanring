@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"sync"
 )
+
 var l = list.New()
 
 func main() {
@@ -21,7 +22,7 @@ func main() {
 
 	scene.Range(func(key, value interface{}) bool {
 		fmt.Println("iterate:", key, value)
-		return  true
+		return true
 	})
 
 	l.PushFront("fist")

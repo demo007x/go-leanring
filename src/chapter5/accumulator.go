@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-func Accumulate(value int) func() int  {
+func Accumulate(value int) func() int {
 	return func() int {
 		value++
-		return  value
+		return value
 	}
 }
 
@@ -22,4 +22,3 @@ func main() {
 	// 打印累加器的函数地址
 	fmt.Printf("%p\n", accumulate2)
 }
-

@@ -7,11 +7,11 @@ type Property struct {
 }
 
 // 设置属性的值
-func (p *Property) SetValue(v int)  {
+func (p *Property) SetValue(v int) {
 	p.value = v
 }
 
-func (p *Property) getValue() int  {
+func (p *Property) getValue() int {
 	return p.value
 }
 func main() {
@@ -20,4 +20,3 @@ func main() {
 	p.SetValue(1001)
 	fmt.Println(p.getValue())
 }
-

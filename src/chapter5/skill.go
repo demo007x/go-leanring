@@ -4,18 +4,19 @@ import (
 	"flag"
 	"fmt"
 )
+
 var skillParam = flag.String("skill", "", "skill to perform")
 
 func main() {
 	flag.Parse()
 	var skill = map[string]func(){
-		"fire" : func ()  {
+		"fire": func() {
 			fmt.Println("chicken fire")
 		},
-		"run":func ()  {
+		"run": func() {
 			fmt.Println("soldier run")
 		},
-		"fly" :func ()  {
+		"fly": func() {
 			fmt.Println("angel fly")
 		},
 	}

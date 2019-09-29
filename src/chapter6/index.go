@@ -5,19 +5,19 @@ type Point struct {
 	Y int
 }
 type Player struct {
-	Name string
+	Name        string
 	HealthPoint int
-	MagicPoint int
+	MagicPoint  int
 }
 
 type Command struct {
-	Name string
-	Var *int // 指令绑定的变量
+	Name    string
+	Var     *int // 指令绑定的变量
 	Comment string
 }
 
 type People struct {
-	name string
+	name  string
 	child *People
 }
 
@@ -38,11 +38,11 @@ func main() {
 	cmd.Var = &version
 	cmd.Comment = "show version"
 	//++++++//
-	
+
 	relation := &People{
-		name:  "爷爷",
+		name: "爷爷",
 		child: &People{
-			name:  "爸爸",
+			name: "爸爸",
 			child: &People{
 				name:  "Me",
 				child: nil,

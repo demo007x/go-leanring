@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func getValue(filename, expectSection, expectKey string) string  {
+func getValue(filename, expectSection, expectKey string) string {
 	file, err := os.Open(filename)
 	if err != nil {
 		return ""
@@ -36,8 +36,8 @@ func getValue(filename, expectSection, expectKey string) string  {
 			continue
 		}
 		// 读取键和键值的代码
-		if linestr[0] == '[' && linestr[len(linestr) - 1] == ']' {
-			sectionName = linestr[1 : len(linestr) - 1]
+		if linestr[0] == '[' && linestr[len(linestr)-1] == ']' {
+			sectionName = linestr[1 : len(linestr)-1]
 			fmt.Println(sectionName, line)
 		}
 

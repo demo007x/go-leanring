@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	valueByKey = make(map[string]int)
+	valueByKey      = make(map[string]int)
 	valueByKeyGuard sync.Mutex
 )
 
@@ -20,7 +20,7 @@ var (
 //	return v
 //}
 
-func readValue(key string) int  {
+func readValue(key string) int {
 	valueByKeyGuard.Lock()
 
 	defer valueByKeyGuard.Unlock()
@@ -55,13 +55,12 @@ func fileSize(filename string) int64 {
 	info, err := f.Stat()
 
 	if err != nil {
-		return  0
+		return 0
 	}
 
 	size := info.Size()
 
 	return size
 }
-
 
 var err = errors.New("this is an error")

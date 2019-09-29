@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	OuterLoop:
-	for i := 0; i<2; i++ {
+OuterLoop:
+	for i := 0; i < 2; i++ {
 		for j := 0; j < 5; j++ {
 			switch j {
 			case 2:
@@ -17,8 +17,8 @@ func main() {
 		}
 	}
 
-	Test:
-	for i := 0; i<2; i++ {
+Test:
+	for i := 0; i < 2; i++ {
 		for j := 0; j < 5; j++ {
 			switch j {
 			case 2:
