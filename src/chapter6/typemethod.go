@@ -4,7 +4,7 @@ import "fmt"
 
 type MyInt int
 
-func (m MyInt) IsZero() bool  {
+func (m MyInt) IsZero() bool {
 	return m == 0
 }
 
@@ -18,7 +18,5 @@ func main() {
 	fmt.Println(b.IsZero())
 
 	b = 1
-
 	fmt.Println(b.add(2))
 }
-

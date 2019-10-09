@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	//var cat int = 1
 	//var str string = "banana"
 	//
@@ -15,11 +15,11 @@ func main()  {
 	//value := *ptr
 	//fmt.Printf("value: %s\n", value)
 
-	x ,y := 1, 2
+	x, y := 1, 2
 	swap(&x, &y)
 	fmt.Println(x, y)
 }
 
-func swap(a, b *int)  {
+func swap(a, b *int) {
 	*b, *a = *a, *b
 }

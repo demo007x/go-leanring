@@ -34,5 +34,3 @@ func main() {
 	fmt.Println(joinString("pig ", "and", "rat"))
 	fmt.Println(joinString("hammer", " mom", " and", " hawk"))
 }
-
-

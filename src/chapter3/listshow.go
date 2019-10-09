@@ -20,7 +20,7 @@ func main() {
 	// 使用
 	l.Remove(element)
 
-	for i := l.Front(); i != nil ; i = i.Next() {
+	for i := l.Front(); i != nil; i = i.Next() {
 		fmt.Println(i.Value)
 	}
 }

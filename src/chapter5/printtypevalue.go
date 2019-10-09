@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func printTypeValue(slist ...interface{}) string  {
+func printTypeValue(slist ...interface{}) string {
 	var b bytes.Buffer
 
 	for _, s := range slist {
@@ -22,15 +22,13 @@ func printTypeValue(slist ...interface{}) string  {
 		b.WriteString("value: ")
 		b.WriteString(str)
 		b.WriteString(" type: ")
-		b.WriteString( typeString )
+		b.WriteString(typeString)
 		b.WriteString("\n")
 	}
 
-	return  b.String()
+	return b.String()
 }
 
 func main() {
 	fmt.Println(printTypeValue(100, "str", true))
 }
-
-

@@ -38,8 +38,8 @@ func getIniFileValues(filepath string) map[string]map[string]string {
 
 		// 解析块
 		var sectionName string
-		if str[0] == '[' && str[len(str) - 1] == ']' {
-			sectionName = str[1:len(str) -1]
+		if str[0] == '[' && str[len(str)-1] == ']' {
+			sectionName = str[1 : len(str)-1]
 		}
 
 		// 解析等号

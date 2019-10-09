@@ -6,12 +6,12 @@ import (
 )
 
 type Brand struct {
-	
 }
 
-func (t Brand) show(){
-	
+func (t Brand) show() {
+
 }
+
 // 别名
 type FakeBrand = Brand
 
@@ -21,7 +21,7 @@ type Vehicle struct {
 }
 
 func main() {
-	var a  Vehicle
+	var a Vehicle
 	a.FakeBrand.show()
 	ta := reflect.TypeOf(a) // 获取a的放射对象
 

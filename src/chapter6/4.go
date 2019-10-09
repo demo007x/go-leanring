@@ -4,11 +4,11 @@ type Bag struct {
 	items []int
 }
 
-func Insert(b *Bag, itemId int)  {
+func Insert(b *Bag, itemId int) {
 	b.items = append(b.items, itemId)
 }
 
-func (b *Bag) Insert(itemid int)  {
+func (b *Bag) Insert(itemid int) {
 	b.items = append(b.items, itemid)
 }
 

@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	for y := 1; y<=9 ; y++ {
-		for x := 1; x <= y ; x++ {
+	for y := 1; y <= 9; y++ {
+		for x := 1; x <= y; x++ {
 			if x == 1 {
 				fmt.Printf("%d*%d = %d", y, x, x*y)
 			} else {
@@ -14,7 +14,7 @@ func main() {
 		fmt.Println()
 	}
 
-	for key, value := range []int{1,2,3,4} {
+	for key, value := range []int{1, 2, 3, 4} {
 		fmt.Printf("key:%d value:%d \n", key, value)
 	}
 
@@ -24,8 +24,8 @@ func main() {
 	}
 
 	m := map[string]int{
-		"hello" : 100,
-		"world" : 200,
+		"hello": 100,
+		"world": 200,
 	}
 
 	for key, value := range m {

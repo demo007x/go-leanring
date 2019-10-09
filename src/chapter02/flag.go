@@ -21,7 +21,7 @@ func main() {
 
 	theme := "狙击 start"
 
-	for i := 0; i < len(theme); i++  {
+	for i := 0; i < len(theme); i++ {
 		fmt.Printf("ascill: %c %d\n", theme[i], theme[i])
 	}
 

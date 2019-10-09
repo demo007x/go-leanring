@@ -1,6 +1,5 @@
 package main
 
-
 func main() {
 	//scene := make(map[string]int)
 	//scene["route"] = 66
