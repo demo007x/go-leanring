@@ -1,0 +1,8 @@
+/pkg/mod/*
+/bin/*
+/pkg/*
+/src/.idea/
+/src/.vscode/*
+/src/pkg/*
+.idea/
+.vscode/
