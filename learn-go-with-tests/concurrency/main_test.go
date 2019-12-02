@@ -6,17 +6,6 @@ import (
 	"time"
 )
 
-type WebSiteChecker func(string) bool
-
-func CheckWebsites(wc WebSiteChecker, urls []string) map[string]bool {
-	results := make(map[string]bool)
-	for _, url := range urls {
-		results[url] = wc(url)
-	}
-
-	return results
-}
-
 func mockWebsiteChecker(url string) bool {
 	if url == "waat://furhurterwe.geds" {
 		return false
@@ -24,6 +13,7 @@ func mockWebsiteChecker(url string) bool {
 
 	return true
 }
+
 func TestCheckWebsites(t *testing.T) {
 	websites := []string{
 		"http://google.com",
@@ -32,10 +22,8 @@ func TestCheckWebsites(t *testing.T) {
 	}
 
 	actualResults := CheckWebsites(mockWebsiteChecker, websites)
-
 	want := len(websites)
 	got := len(actualResults)
-
 	if want != got {
 		t.Fatalf("Wanted %v, got %v", want, got)
 	}
@@ -46,18 +34,18 @@ func TestCheckWebsites(t *testing.T) {
 		"waat://furhurterwe.geds":    false,
 	}
 
-	if !reflect.DeepEqual(actualResults, expectedResults) {
-		t.Fatalf("Wanted %v, got %v", expectedResults, actualResults)
+	if !reflect.DeepEqual(expectedResults, actualResults) {
+		t.Fatalf("wantd %v, got %v", expectedResults, actualResults)
 	}
 }
 
 func slowStubWebsiteChecker(_ string) bool {
-	time.Sleep(20 * time.Second)
+	time.Sleep(20 * time.Millisecond)
 	return true
 }
 
 func BenchmarkCheckWebsites(b *testing.B) {
-	urls := make([]string, 100) // 切片
+	urls := make([]string, 100)
 	for i := 0; i < len(urls); i++ {
 		urls[i] = "a url"
 	}
