@@ -9,16 +9,16 @@ import (
 )
 
 func main() {
-	for _,url := range os.Args[1:] {
+	for _, url := range os.Args[1:] {
 		if !strings.HasPrefix(url, "http://") {
-			url = "http://"+url
+			url = "http://" + url
 			fmt.Println(url)
 		}
 		resp, err := http.Get(url)
 		for name, val := range resp.Header {
 			fmt.Println(name, val)
 		}
-		fmt.Printf("http status: %s \n", resp.Status);
+		fmt.Printf("http status: %s \n", resp.Status)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "fetch: %v\n", err)
 			os.Exit(1)

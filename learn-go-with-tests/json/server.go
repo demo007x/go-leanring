@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 )
@@ -11,6 +12,7 @@ type PlayerStore interface {
 	GetPlayerScore(name string) int
 	// 设置玩家的值+1
 	RecordWin(name string)
+	GetLeague() []Player
 }
 
 type PlayerServer struct {
@@ -18,9 +20,23 @@ type PlayerServer struct {
 	//route *http.ServeMux
 	http.Handler
 }
-
+// 定义 Player 的结构 [切片]
+type Player struct {
+	Name string
+	Wins int
+}
 func (p *PlayerServer) leagueHandle(w http.ResponseWriter, r *http.Request) {
+	// json 编码
+	w.Header().Set("content-type", "application/json")
+	json.NewEncoder(w).Encode(p.store.GetLeague())
 	w.WriteHeader(http.StatusOK)
+}
+
+func (p *PlayerServer) getLeagueTable() []Player {
+	//返回一个json结构
+	return []Player{
+		{"Chris", 20,},
+	}
 }
 
 func (p *PlayerServer) playersHandler(w http.ResponseWriter, r *http.Request) {
