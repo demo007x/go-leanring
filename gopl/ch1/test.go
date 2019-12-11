@@ -5,10 +5,11 @@ import "fmt"
 func main() {
 	x := 1
 	p := &x
+	incr(p)
+	fmt.Println(incr(&x))
+}
 
-	fmt.Println(*p) // 取 p的值
-
-	*p = 10
-	fmt.Println(x)
-	fmt.Println(p)
+func incr(p *int) int {
+	*p++
+	return *p
 }
