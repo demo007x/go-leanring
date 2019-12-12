@@ -10,7 +10,8 @@ func main() {
 	//if !*n {
 	//	fmt.Println(*n)
 	//}
-
+	medals := []string{"gold", "silver", "bronze"}
+	fmt.Printf("%T", medals)
 	p := new(int)
 	s := new(string)
 

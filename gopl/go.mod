@@ -1,3 +1,3 @@
-module go-leanring/gopl
+module gopl
 
 go 1.13
