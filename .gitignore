@@ -6,3 +6,5 @@
 /src/pkg/*
 .idea/
 .vscode/
+./websocket/.idea
+./websocket/frontend/node_modules
