@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.Title}}</title>
+</head>
+<body>
+<form action="/whoami" method="POST">
+    我是谁:
+    <select name="name">
+        {{range .Names}}
+        <option value="{{.}}">{{.}}</option>
+        {{end}}
+    </select>
+    <input type="submit" />
+</form>
+</body>
+</html>

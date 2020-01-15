@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	f, err := os.Open("./1.go")
+	f, err := os.Open("./time.go")
 	fmt.Println(err)
 	if err, ok := err.(*os.PathError); ok {
 		fmt.Println("File at path", err.Path, "failed to open")
