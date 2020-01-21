@@ -1,7 +1,7 @@
 package animal
 
 type Animal struct {
-	name string
+	Name string
 }
 
 func (a Animal) Call() string {
@@ -13,9 +13,9 @@ func (a Animal) FavorFood() string {
 }
 
 func (a Animal) GetName() string {
-	return a.name
+	return a.Name
 }
 
 func NewAnimal(name string) *Animal {
-	return &Animal{name: name}
+	return &Animal{Name: name}
 }
