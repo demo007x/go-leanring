@@ -10,9 +10,18 @@ import (
 
 var (
 	upgrade = websocket.Upgrader{
+		HandshakeTimeout: 0,
+		ReadBufferSize:   0,
+		WriteBufferSize:  0,
+		WriteBufferPool:  nil,
+		Subprotocols:     nil,
+		Error: func(w http.ResponseWriter, r *http.Request, status int, reason error) {
+			w.Write([]byte(reason.Error()))
+		},
 		CheckOrigin: func(r *http.Request) bool {
 			return true
 		},
+		EnableCompression: false,
 	}
 )
 
