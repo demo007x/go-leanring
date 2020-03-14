@@ -1,7 +1,6 @@
 package main
 
 import (
-<<<<<<< HEAD
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -19,12 +18,6 @@ func main() {
 	}
 	bytes, _ := ioutil.ReadAll(file)
 	fmt.Println(string([]byte(bytes)))
-=======
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
-	"os"
-	"path/filepath"
 )
 
 func main01() {
@@ -129,5 +122,4 @@ func main() {
 		fmt.Println(info.Name(), info.IsDir())
 		return nil
 	}))
->>>>>>> 6fd35c0e331688b666b1b88cb588c17b1af7e4df
 }
