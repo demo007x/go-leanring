@@ -12,6 +12,9 @@ func add(a, b int) {
 }
 
 func main() {
-	go add(1, 3)
+	count := 10
+	for i := 0; i < count; i++ {
+		go add(i, i)
+	}
 	time.Sleep(1e9)
 }
