@@ -2,22 +2,20 @@ package main
 
 import (
 	"fmt"
-	"math"
+	"time"
 )
 
-type IAnimal interface {
-	GetName() string
-	Call() string
-	FavorFood() string
-}
-
 func main() {
-	fmt.Println(math.MaxInt32)
-	//var animal = animal2.Animal{"小狗"}
-	//var ianimal IAnimal = animal2.Dog{&animal}
-	//if dog, ok := ianimal.(animal2.Animal); ok {
-	//	fmt.Println(dog.GetName())
-	//} else {
-	//	fmt.Println(false)
-	//}
+	var startAt = "2023-08-01 09:10:11"
+	var endAt = "2023-09-02 09:10:11"
+
+	// var startDate = strings.Split(startAt, " ")
+	// var endDate = strings.Split(endAt, " ")
+
+	startP, _ := time.ParseInLocation(time.DateTime, startAt, time.Local)
+	endP, _ := time.ParseInLocation(time.DateTime, endAt, time.Local)
+	for startP.Unix() <= endP.Unix() {
+		fmt.Println(startP.Day())
+		startP = startP.Local().Add(time.Hour * 24)
+	}
 }
